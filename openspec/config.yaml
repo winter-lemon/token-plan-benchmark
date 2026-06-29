@@ -1,0 +1,17 @@
+schema: spec-driven
+
+context: |
+  Tech stack: Python >= 3.11, setuptools, Pydantic, Rich, Click, matplotlib, seaborn, openai SDK
+  Code style: dataclasses for data models, Pydantic BaseModel for config validation
+  Domain: LLM inference performance benchmarking (TTFT, TPS)
+  Providers: Tencent Hunyuan, Alibaba Bailian (DashScope), ByteDance Volcano Engine (Ark)
+  All providers use OpenAI-compatible API, accessed via the openai Python SDK
+
+rules:
+  proposal:
+    - Keep proposals focused on one capability at a time
+    - Always include affected modules and data flow
+    - For new modules, place source under src/token_plan_benchmark/
+  tasks:
+    - Break implementation into small, testable steps
+    - Each task should reference specific files to create/modify

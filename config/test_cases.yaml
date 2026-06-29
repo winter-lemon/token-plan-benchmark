@@ -1,0 +1,24 @@
+test_cases:
+  - id: short_answer
+    name: 简短回答 (50 tokens)
+    category: short
+    prompt: "请用三句话解释什么是 CPU 缓存。"
+    expected_output_tokens: 80
+
+  - id: medium_explanation
+    name: 中等解释 (200 tokens)
+    category: medium
+    prompt: "请详细解释 TCP 和 UDP 协议的区别，包括各自的使用场景、优势和劣势。"
+    expected_output_tokens: 300
+
+  - id: long_essay
+    name: 长篇分析 (500 tokens)
+    category: long
+    prompt: "请全面分析微服务架构和单体架构之间的权衡，涵盖开发效率、运维复杂度、调试、测试和部署策略等方面。"
+    expected_output_tokens: 600
+
+  - id: code_generation
+    name: 代码生成 (300 tokens)
+    category: code
+    prompt: "请用 Python 实现一个基于 asyncio 的并发限流器，并附上详细注释说明每个设计决策。"
+    expected_output_tokens: 400

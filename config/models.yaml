@@ -1,0 +1,77 @@
+models:
+  # ═══════════════════════════════════════════════════════════════════
+  # 维度1：同一模型 × 不同厂商
+  # ═══════════════════════════════════════════════════════════════════
+
+  # DeepSeek-V3 在三家厂商的部署
+  - model_id: deepseek-v3
+    display_name: DeepSeek-V3
+    provider: aliyun
+
+  - model_id: deepseek-v3
+    display_name: DeepSeek-V3
+    provider: tencent
+
+  - model_id: deepseek-v3
+    display_name: DeepSeek-V3
+    provider: volcano
+
+  # Qwen2.5-72B-Instruct 在三家厂商的部署
+  - model_id: qwen2.5-72b-instruct
+    display_name: Qwen2.5 72B Instruct
+    provider: aliyun
+
+  - model_id: qwen2.5-72b-instruct
+    display_name: Qwen2.5 72B Instruct
+    provider: tencent
+
+  - model_id: qwen2.5-72b-instruct
+    display_name: Qwen2.5 72B Instruct
+    provider: volcano
+
+  # ═══════════════════════════════════════════════════════════════════
+  # 维度2：同一厂商 × 不同模型
+  # ═══════════════════════════════════════════════════════════════════
+
+  # --- 阿里云百炼模型线 ---
+  - model_id: qwen-max
+    display_name: Qwen-Max
+    provider: aliyun
+
+  - model_id: qwen-plus
+    display_name: Qwen-Plus
+    provider: aliyun
+
+  - model_id: qwen-turbo
+    display_name: Qwen-Turbo
+    provider: aliyun
+
+  # --- 腾讯混元模型线 ---
+  - model_id: hunyuan-turbos-latest
+    display_name: 混元 Turbo
+    provider: tencent
+
+  - model_id: hunyuan-lite
+    display_name: 混元 Lite
+    provider: tencent
+
+  - model_id: hunyuan-standard
+    display_name: 混元 Standard
+    provider: tencent
+
+  # --- 字节火山引擎模型线 ---
+  - model_id: doubao-pro-32k
+    display_name: 豆包 Pro 32K
+    provider: volcano
+
+  - model_id: doubao-lite-32k
+    display_name: 豆包 Lite 32K
+    provider: volcano
+
+  - model_id: deepseek-r1-250120
+    display_name: DeepSeek-R1
+    provider: volcano
+
+  - model_id: deepseek-v3-250324
+    display_name: DeepSeek-V3 (Ark)
+    provider: volcano

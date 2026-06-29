@@ -1,0 +1,37 @@
+# Benchmark run configuration
+# Adjust these settings before running `token-benchmark run`.
+
+# The comparison dimension
+dimension: same_model_different_provider
+
+# Human-readable description for the run
+description: "DeepSeek-V3 on all three providers"
+
+# Runtime parameters
+warmup_iterations: 1
+benchmark_iterations: 3
+max_concurrency: 1
+cooldown_seconds: 1.0
+
+# Test matrix — cartesian product of providers × models × test_cases
+# Only valid (provider, model) combinations from models.yaml are executed.
+providers:
+  - aliyun
+  - tencent
+  - volcano
+
+models:
+  - deepseek-v3
+
+test_cases:
+  - short_answer
+  - medium_explanation
+
+# Alternatively, define an explicit test matrix (overrides cartesian product):
+# test_matrix:
+#   - provider: aliyun
+#     model: deepseek-v3
+#     test_case: short_answer
+#   - provider: tencent
+#     model: deepseek-v3
+#     test_case: short_answer
