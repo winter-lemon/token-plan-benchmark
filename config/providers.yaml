@@ -4,15 +4,18 @@ providers:
     adapter: generic_openai_compat
     base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
     api_key_env: DASHSCOPE_API_KEY
+    base_url_env: DASHSCOPE_BASE_URL
 
   - name: tencent
     display_name: 腾讯混元
     adapter: generic_openai_compat
     base_url: https://api.hunyuan.cloud.tencent.com/v1
     api_key_env: HUNYUAN_API_KEY
+    base_url_env: HUNYUAN_BASE_URL
 
   - name: volcano
     display_name: 字节火山引擎
     adapter: generic_openai_compat
     base_url: https://ark.cn-beijing.volces.com/api/v3
     api_key_env: ARK_API_KEY
+    base_url_env: ARK_BASE_URL

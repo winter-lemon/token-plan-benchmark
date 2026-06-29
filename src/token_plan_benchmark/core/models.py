@@ -37,6 +37,7 @@ class ProviderConfig:
     adapter: str
     base_url: str
     api_key_env: str
+    base_url_env: str = ""
     extra_headers: dict[str, str] = field(default_factory=dict)
     extra_body: dict = field(default_factory=dict)
 

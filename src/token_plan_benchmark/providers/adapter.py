@@ -38,13 +38,19 @@ class OpenAICompatProvider:
                 f"API key not found in environment variable: {config.api_key_env}"
             )
 
+        base_url = config.base_url
+        if config.base_url_env:
+            env_url = os.getenv(config.base_url_env)
+            if env_url:
+                base_url = env_url
+
         timeout: float = DEFAULT_TIMEOUT
         if config.extra_body:
             timeout = float(config.extra_body.get("timeout", DEFAULT_TIMEOUT))
 
         self._client = openai.AsyncOpenAI(
             api_key=api_key,
-            base_url=config.base_url,
+            base_url=base_url,
             default_headers=config.extra_headers or None,
             timeout=timeout,
         )
